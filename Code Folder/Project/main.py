@@ -7,3 +7,5 @@ Date: 2023/01/06
 
 
 # initialise lists and variables
+
+#Read in File
