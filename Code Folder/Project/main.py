@@ -24,7 +24,8 @@ noQuestions = 0
 absolutePath = os.path.dirname(__file__) # Solution found @ https://towardsthecloud.com/get-relative-path-python
 pathQuestions = "questions"
 fullPath = os.path.join(absolutePath, pathQuestions)
-os.listdir(fullPath)
+print(fullPath)
+print(os.listdir(fullPath))
 
 # Ask for Player name
 # Give users a choice between 5, 10, 15 or 20 Questions
