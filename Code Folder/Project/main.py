@@ -13,11 +13,10 @@ import os
 # initialise lists and variables
 # List = Question, AnswerA, AnswerB, AnswerC, AnswerD, Answer Key
 # Variables: Score, Name, Number of questions needed
-question = []
-score = 0
-name = " "
-noQuestions = 0
 
+
+'''
+Park until rest of game works
 # List all files in Question Database Folder
 # Ask User for a quiz by either typing in Quiz name or choosing number (Preferred)
 # Read in Questions, Answers and Answer Keys and pass to list (Function)
@@ -26,7 +25,14 @@ pathQuestions = "questions"             # also https://pieriantraining.com/itera
 fullPath = os.path.join(absolutePath, pathQuestions)
 print(fullPath)
 print(os.listdir(fullPath))
+'''
 
+# Open specific csv file and load into list
+file = open("quiz.csv","r")
+question = list(csv.reader(file, delimiter=","))
+file.close()
+
+print(question)
 # Ask for Player name
 # Give users a choice between 5, 10, 15 or 20 Questions
 # If outside this range display error and ask again.
