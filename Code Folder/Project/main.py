@@ -22,7 +22,7 @@ noQuestions = 0
 # Ask User for a quiz by either typing in Quiz name or choosing number (Preferred)
 # Read in Questions, Answers and Answer Keys and pass to list (Function)
 absolutePath = os.path.dirname(__file__) # Solution found @ https://towardsthecloud.com/get-relative-path-python
-pathQuestions = "questions"
+pathQuestions = "questions"             # also https://pieriantraining.com/iterate-over-files-in-directory-using-python/
 fullPath = os.path.join(absolutePath, pathQuestions)
 print(fullPath)
 print(os.listdir(fullPath))
