@@ -5,10 +5,10 @@ Date: 2024/01/07
 
 '''
 
-def Voltage():
+def Voltage(i,r):
 
 
-def Current():
+def Current(v,r):
 
 
-def Resistance():
+def Resistance(v,i):
