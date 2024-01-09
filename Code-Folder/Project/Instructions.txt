@@ -1,7 +1,7 @@
 The following program will allow you to carry out some simple calcuations related to Electronics
 
 Choose from the following list of Calculators
-1. Ohms Law Calculator
+1. Ohms Law
 2. LED Protetive resistor Calculator
 3. Total resistance of resistors in Parallel.
 
