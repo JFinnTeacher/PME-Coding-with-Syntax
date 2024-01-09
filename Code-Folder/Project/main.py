@@ -11,13 +11,15 @@ import os
 # 1. Ohms Law Calculator
 # 2. LED Protective resistor Calculator
 # 3. Resistors in Parallell Calculator
-cwd = os.getcwd()
-instPath = cwd+"\instructions.txt"
+
+cwd = os.path.dirname(os.path.abspath(__file__)) #Solution from https://www.reddit.com/r/learnpython/comments/12cs01e/filenotfounderror_errno_2_no_such_file_or/?rdt=38315
+instPath = os.path.join(cwd, "Instructions.txt")
 print(instPath)
 instructions = open(instPath, "r")
 for line in instructions: # solution from https://www.freecodecamp.org/news/how-to-read-files-in-python/
     print(line)
 
+choice = input("Please choose the Calculator you wish to use by typing the menu number and pressing enter: ")
 # Define Ohms Law Function
     # List the 3 types of Calculator and ask for input from User
     # 1. Calculate Voltage
