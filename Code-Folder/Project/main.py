@@ -7,6 +7,9 @@ Requirements:   Variables and Operators, Sequence of Statements, Conditional Sta
 '''
 # Load required Libraries
 import os
+from .LEDResistor import *
+from .ohmsLaw import *
+from .parallelresist import *
 # Initial Instructions and list of calculators
 # 1. Ohms Law Calculator
 # 2. LED Protective resistor Calculator
@@ -18,8 +21,9 @@ print(instPath)
 instructions = open(instPath, "r")
 for line in instructions: # solution from https://www.freecodecamp.org/news/how-to-read-files-in-python/
     print(line)
-
 choice = input("Please choose the Calculator you wish to use by typing the menu number and pressing enter: ")
+
+
 # Define Ohms Law Function
     # List the 3 types of Calculator and ask for input from User
     # 1. Calculate Voltage
