@@ -27,37 +27,37 @@ def ohms():
 # List the 3 types of Calculator and ask for input from User
     print("Choose from the following calculations.\n1. Calculate Voltage\n2. Calculate Resistance\n3. Calculate Current")
     ohmchoice = int(input("Which Calculation do you want to carry out: "))
-    while ohmchoice != (1, 2, 3):
-        if ohmchoice == 1: 
-            # 1. Calculate Voltage
-            # Ask for values of Current and Resistance
-            # Calculate Voltage and print value to the screen
-            amps = float(input("Enter the Current in Amps: "))
-            ohm = float(input("Enter the Resistance in Ohms: "))
-            volts = amps*ohm
-            print("Your voltage is ",volts,"Volts")
-            exit()
-        elif ohmchoice == 2:
-            # 2. Calculate Resistance
-            # Ask for Values of Current and Voltage
-            # Calculate Resistance and print value to screen
-            amps = float(input("Enter the Current in Amps: "))
-            volts = float(input("Enter the Voltage in Volts: "))
-            ohm = volts/amps
-            print("Your resistance is ",ohm," Ohms")
-            exit()
-        elif ohmchoice == 3:
-            # 3. Calculate Current
-            # Ask for Values of Voltage and Resistance
-            # Calculate Current and print value to the screen
-            volts = float(input("Enter the Voltage in Volts: "))
-            ohm = float(input("Enter the Resistance in Ohms: "))
-            amps = volts/ohm
-            print("Your current is ",amps," Amps")
-            exit()
-        else:
-            # Ask again if correct choice is not made
-            ohmchoice = int(input("Please choose option 1, 2 or 3: "))
+    while ohmchoice not in [1, 2, 3]: # Solution from - https://stackoverflow.com/questions/46620572/user-input-choice-using-while-loops-and-if-loops-in-python
+        # Ask again if correct choice is not made
+        ohmchoice = int(input("Please choose option 1, 2 or 3: "))
+        
+    if ohmchoice == 1: 
+        # 1. Calculate Voltage
+        # Ask for values of Current and Resistance
+        # Calculate Voltage and print value to the screen
+        amps = float(input("Enter the Current in Amps: "))
+        ohm = float(input("Enter the Resistance in Ohms: "))
+        volts = amps*ohm
+        print("Your voltage is ",volts,"Volts")
+        exit()
+    elif ohmchoice == 2:
+        # 2. Calculate Resistance
+        # Ask for Values of Current and Voltage
+        # Calculate Resistance and print value to screen
+        amps = float(input("Enter the Current in Amps: "))
+        volts = float(input("Enter the Voltage in Volts: "))
+        ohm = volts/amps
+        print("Your resistance is ",ohm," Ohms")
+        exit()
+    elif ohmchoice == 3:
+        # 3. Calculate Current
+        # Ask for Values of Voltage and Resistance
+        # Calculate Current and print value to the screen
+        volts = float(input("Enter the Voltage in Volts: "))
+        ohm = float(input("Enter the Resistance in Ohms: "))
+        amps = volts/ohm
+        print("Your current is ",amps," Amps")
+        exit()  
         
 
 
@@ -91,13 +91,12 @@ def Parallelresist():
 #beginning of program
 choice = int(input("Please choose the Calculator you wish to use by typing the menu number and pressing enter: "))
 # Initial Menu choice to start the application
-while choice != (1,2,3):
-    if choice == 1:
-        ohms()
-    elif choice == 2:
-        LEDresist()
-    elif choice == 3:
-        Parallelresist()
-    else:
-        choice = int(input("Please choose 1, 2 or 3 from the options provided: "))
-        
+while choice not in [1,2,3]:
+    choice = int(input("Please choose 1, 2 or 3 from the options provided: "))
+    
+if choice == 1:
+    ohms()
+elif choice == 2:
+    LEDresist()
+elif choice == 3:
+    Parallelresist()
